@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語語彙カード</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #0f0f12;
+  color: #f0ede8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.logo {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #585868;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+.logo span { color: #e8522a; }
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 360px;
+}
+.card-link {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a20;
+  border: 1px solid #2e2e38;
+  border-radius: 18px;
+  padding: 24px 24px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.12s;
+  position: relative;
+  overflow: hidden;
+}
+.card-link::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.card-link.n1::before { background: linear-gradient(90deg, #e8522a, #c9a84c); }
+.card-link.ono::before { background: linear-gradient(90deg, #5b8dee, #4caf7d); }
+.card-link:active { transform: scale(0.97); }
+.card-link:active.n1 { border-color: #e8522a; }
+.card-link:active.ono { border-color: #5b8dee; }
+
+.card-title {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.n1 .card-title { color: #f0ede8; }
+.ono .card-title { color: #f0ede8; }
+
+.card-sub {
+  font-size: 11px;
+  color: #585868;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-count {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+.n1 .card-count { color: #e8522a; }
+.ono .card-count { color: #5b8dee; }
+
+.card-count-label {
+  font-size: 10px;
+  color: #585868;
+  margin-top: 2px;
+}
+.card-arrow {
+  font-size: 20px;
+  color: #2e2e38;
+}
+.footer {
+  margin-top: 40px;
+  font-size: 10px;
+  color: #2e2e38;
+  letter-spacing: 0.08em;
+}
+</style>
+</head>
+<body>
+  <div class="logo">日本語 <span>語彙</span> カード</div>
+
+  <div class="cards">
+    <a class="card-link n1" href="n1.html">
+      <div class="card-title">N1 語彙カード</div>
+      <div class="card-sub">N1 VOCABULARY · SRS学習</div>
+      <div class="card-meta">
+        <div>
+          <div class="card-count">2700+</div>
+          <div class="card-count-label">词汇</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+    <a class="card-link ono" href="onomatope.html">
+      <div class="card-title">オノマトペカード</div>
+      <div class="card-sub">擬音語・擬態語 · SRS学習</div>
+      <div class="card-meta">
+        <div>
+          <div class="card-count">289</div>
+          <div class="card-count-label">词汇</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer">0xcas3y.github.io / n1-vocabulary</div>
+</body>
+</html>
